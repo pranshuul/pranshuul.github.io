@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pranshul Shenoy - Personal Website</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Raleway", "sans-serif"],
+            serif: ["Playfair Display", "serif"],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="theme-default transition-colors duration-500 ease-in-out">
+  <!-- Header Section -->
+  <header id="main-header"
+    class="fixed w-full top-0 z-50 transition-all duration-300 ease-in-out bg-opacity-95 backdrop-blur-sm">
+    <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+      <a href="#" class="text-3xl font-serif font-bold">Pranshul Shenoy</a>
+
+      <!-- Theme Toggle Button -->
+      <button id="theme-toggle"
+        class="hidden md:block p-2 rounded-full bg-opacity-20 hover:bg-opacity-30 transition-all">
+        <i class="fas fa-palette text-xl"></i>
+      </button>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-8 items-center">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#text-analyzer" class="nav-link">Text Analyzer</a>
+        <a href="assets/docs/cv.pdf" target="_blank" class="btn-primary">
+          <i class="fas fa-file-pdf mr-2"></i>CV
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Sidebar -->
+  <div id="mobile-sidebar"
+    class="fixed top-0 right-0 h-full w-64 transform translate-x-full transition-transform duration-300 ease-in-out z-50 shadow-xl">
+    <div class="h-full flex flex-col p-6">
+      <div class="flex justify-between items-center mb-10">
+        <h2 class="text-xl font-bold font-serif">Menu</h2>
+        <button id="close-sidebar" class="p-2">
+          <i class="fas fa-times text-xl"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col space-y-6">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#text-analyzer" class="nav-link">Text Analyzer</a>
+        <a href="assets/docs/cv.pdf" target="_blank" class="btn-primary text-center mt-4">
+          <i class="fas fa-file-pdf mr-2"></i>CV
+        </a>
+        <button id="mobile-theme-toggle" class="mt-auto p-2 flex items-center">
+          <i class="fas fa-palette text-xl mr-3"></i>
+          Change Theme
+        </button>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="min-h-screen flex items-center pt-24">
+    <div class="container mx-auto px-4 py-16">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <h1 class="text-5xl md:text-6xl font-serif font-bold leading-tight mb-6 slide-up">
+            Hello, I'm <span class="highlight">Pranshul Shenoy</span>
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 max-w-lg slide-up delay-1">
+            Software Developer & Student
+          </p>
+          <div class="flex space-x-4 slide-up delay-2">
+            <a href="#about" class="btn-primary">Learn More</a>
+            <a href="assets/docs/cv.pdf" target="_blank" class="btn-secondary">
+              <i class="fas fa-file-pdf mr-2"></i>Download CV
+            </a>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 fade-in">
+            <img src="assets/img/profile.jpeg" alt="Pranshul Shenoy" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title">About Me</h2>
+      <div class="card">
+        <div class="flex flex-col md:flex-row gap-8">
+          <div class="md:w-2/3">
+            <p class="mb-4">
+              I am Pranshul Shenoy, a passionate software developer currently
+              pursuing my Bachelor's and Master's degrees in Computer Science.
+              I have a strong foundation in web development and systems
+              programming, with expertise in HTML, CSS, JavaScript, and their
+              various modern frameworks, alongside Rust, C++, Golang, etc. My
+              goal is to create innovative solutions that make a positive
+              impact on people's lives through technology.
+            </p>
+            <p>
+              Originally from the beautiful city of Bangalore, I've always
+              been fascinated by how technology can solve real-world problems.
+              When I'm not coding, you'll find me clicking some photos,
+              consuming media, or experimenting with new recipes in the
+              kitchen.
+            </p>
+          </div>
+          <div class="md:w-1/3">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="rounded-lg overflow-hidden">
+                <img src="assets/img/hometown1.jpeg" alt="My Hometown"
+                  class="w-full h-40 object-cover hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div class="rounded-lg overflow-hidden">
+                <img src="assets/img/hometown3.jpeg" alt="My Hometown"
+                  class="w-full h-40 object-cover hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div class="rounded-lg overflow-hidden col-span-2">
+                <img src="assets/img/hometown2.jpeg" alt="My Hometown"
+                  class="w-full h-40 object-cover hover:scale-105 transition-transform duration-300" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title">Education</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="card">
+          <h3 class="text-xl font-bold mb-4 font-serif">
+            Bachelor of Computer Science
+          </h3>
+          <p class="text-lg mb-2">
+            International Institute of Information Technology, Hyderabad
+          </p>
+          <p class="mb-2">
+            <i class="far fa-calendar-alt mr-2"></i>2024 - Present
+          </p>
+          <p>
+            Currently focused on Virtual Reality, Systems Programming, and
+            User Experience.
+          </p>
+        </div>
+        <div class="card">
+          <h3 class="text-xl font-bold mb-4 font-serif">
+            Master of Computer Science
+          </h3>
+          <p class="text-lg mb-2">National Institute of Technology</p>
+          <p class="mb-2">
+            <i class="far fa-calendar-alt mr-2"></i>2024 - Present
+          </p>
+          <p>Undeclared Specialty as of 15th April, 2025.</p>
+        </div>
+        <!-- <div class="card"> -->
+        <!--   <h3 class="text-xl font-bold mb-4 font-serif"> -->
+        <!--     Higher Secondary Education -->
+        <!--   </h3> -->
+        <!--   <p class="text-lg mb-2">Primus Public School</p> -->
+        <!--   <p class="mb-2"> -->
+        <!--     <i class="far fa-calendar-alt mr-2"></i>2022 - 2024 -->
+        <!--   </p> -->
+        <!--   <p> -->
+        <!--     Science stream with Computer Science, Mathematics and Physics. -->
+        <!--   </p> -->
+        <!-- </div> -->
+        <!-- <div class="card"> -->
+        <!--   <h3 class="text-xl font-bold mb-4 font-serif">Achievements</h3> -->
+        <!--   <ul class="list-disc pl-5 space-y-2"> -->
+        <!--   </ul> -->
+        <!-- </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="card">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-6 font-serif">
+              Programming Languages
+            </h3>
+            <div class="space-y-4">
+              <div class="skill-bar" data-skill="JavaScript" data-level="100"></div>
+              <div class="skill-bar" data-skill="TypeScript" data-level="100"></div>
+              <div class="skill-bar" data-skill="Python" data-level="90"></div>
+              <div class="skill-bar" data-skill="Java" data-level="95"></div>
+              <div class="skill-bar" data-skill="C++" data-level="100"></div>
+              <div class="skill-bar" data-skill="Rust" data-level="60"></div>
+              <div class="skill-bar" data-skill="Golang" data-level="75"></div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-6 font-serif">
+              Web Technologies
+            </h3>
+            <div class="space-y-4">
+              <div class="skill-bar" data-skill="HTML/CSS" data-level="95"></div>
+              <div class="skill-bar" data-skill="React" data-level="85"></div>
+              <div class="skill-bar" data-skill="Node.js" data-level="80"></div>
+              <div class="skill-bar" data-skill="Deno.js" data-level="80"></div>
+              <div class="skill-bar" data-skill="Bun.js" data-level="80"></div>
+              <div class="skill-bar" data-skill="Angular" data-level="70"></div>
+              <div class="skill-bar" data-skill="Vue.js" data-level="65"></div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-6 font-serif">Others</h3>
+            <div class="space-y-4">
+              <div class="skill-bar" data-skill="Git" data-level="100"></div>
+              <div class="skill-bar" data-skill="SQL" data-level="95"></div>
+              <div class="skill-bar" data-skill="Docker" data-level="75"></div>
+              <div class="skill-bar" data-skill="Kubernetes" data-level="70"></div>
+              <div class="skill-bar" data-skill="AWS" data-level="40"></div>
+              <div class="skill-bar" data-skill="TensorFlow" data-level="35"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Text Analyzer Section (Q3) -->
+  <section id="text-analyzer" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title">Text Analyzer</h2>
+      <div class="card">
+        <p class="mb-6">Enter text (at least 10,000 words) for analysis:</p>
+        <textarea id="text-input" rows="10" class="w-full p-4 border rounded-lg focus:outline-none focus:ring-2 mb-6"
+          placeholder="Paste your text here..."></textarea>
+        <button id="analyze-button" class="btn-primary mb-8">
+          Analyze Text
+        </button>
+
+        <div id="analysis-results" class="hidden space-y-8">
+          <!-- Basic Analysis -->
+          <div class="p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 font-serif">Basic Analysis</h3>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+              <div class="text-center p-4 rounded-lg shadow-sm">
+                <div id="count-letters" class="text-3xl font-bold mb-2">
+                  0
+                </div>
+                <div class="text-sm">Letters</div>
+              </div>
+              <div class="text-center p-4 rounded-lg shadow-sm">
+                <div id="count-words" class="text-3xl font-bold mb-2">0</div>
+                <div class="text-sm">Words</div>
+              </div>
+              <div class="text-center p-4 rounded-lg shadow-sm">
+                <div id="count-spaces" class="text-3xl font-bold mb-2">0</div>
+                <div class="text-sm">Spaces</div>
+              </div>
+              <div class="text-center p-4 rounded-lg shadow-sm">
+                <div id="count-newlines" class="text-3xl font-bold mb-2">
+                  0
+                </div>
+                <div class="text-sm">Newlines</div>
+              </div>
+              <div class="text-center p-4 rounded-lg shadow-sm">
+                <div id="count-special" class="text-3xl font-bold mb-2">
+                  0
+                </div>
+                <div class="text-sm">Special Symbols</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Token Analysis -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Pronouns -->
+            <div class="p-6 rounded-lg">
+              <h3 class="text-xl font-bold mb-4 font-serif">Pronouns</h3>
+              <div id="pronouns-list" class="max-h-60 overflow-y-auto"></div>
+            </div>
+
+            <!-- Prepositions -->
+            <div class="p-6 rounded-lg">
+              <h3 class="text-xl font-bold mb-4 font-serif">Prepositions</h3>
+              <div id="prepositions-list" class="max-h-60 overflow-y-auto"></div>
+            </div>
+
+            <!-- Articles -->
+            <div class="p-6 rounded-lg">
+              <h3 class="text-xl font-bold mb-4 font-serif">
+                Indefinite Articles
+              </h3>
+              <div id="articles-list" class="max-h-60 overflow-y-auto"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <h2 class="text-2xl font-bold font-serif mb-2">Pranshul Shenoy</h2>
+          <p>© 2025 All Rights Reserved</p>
+        </div>
+        <div class="flex space-x-6">
+          <a href="https://github.com/pranshuul" target="_blank" class="footer-icon"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/PranshulShenoy" target="_blank" class="footer-icon"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com/PranshulShenoy" target="_blank" class="footer-icon"><i
+              class="fab fa-twitter"></i></a>
+          <a href="mailto:pranshul.shenoy@research.iiit.ac.in" target="_blank" class="footer-icon"><i
+              class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/eventTracker.js"></script>
+  <script src="assets/js/textAnalyzer.js"></script>
+</body>
+
+</html>
