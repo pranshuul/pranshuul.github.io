@@ -2,7 +2,8 @@
 
 Author: Pranshul Shenoy
 Date: April 15, 2025
-Website: [URL](pranshuul.github.io)
+
+[Website](pranshuul.github.io) [Repository](https://github.com/pranshuul/pranshuul.github.io)
 
 ---
 
@@ -26,7 +27,7 @@ Website: [URL](pranshuul.github.io)
 
 ## EXECUTION
 
-1. Open `index.html` in any modern browser.
+1. Open [Website](pranshuul.github.io) in any modern browser.
 2. Click the 🎨 button to randomize the theme palette.
 3. Scroll to see header collapse (desktop) or tap ☰ to open menu (mobile).
 4. Inspect console to see click/view event logs.
